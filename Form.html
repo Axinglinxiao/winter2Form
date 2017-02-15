@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form By Axing</title>
+</head>
+<body>
+    <div id="_form">
+        <div>
+            <form action="http://localhost:3000/?action=login" role="form" method="post">
+                <fieldset>
+                    <legend>登录</legend>
+                    <div>
+                        <label for="user_name">User Name</label>
+                        <input type="text" id="user_name" name="user_name" placeholder="Enter&nbsp;Email"/>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" maxlength="15" minlength="5" placeholder="Enter Password"/>
+                    </div>
+                    <div>
+                        <input type="button" class="btn" value="submit1"/>
+                    </div>
+                    <div>
+                        <input type="button" class="btn2" value="submit2"/>
+                        <p id="res">响应内容：</p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
