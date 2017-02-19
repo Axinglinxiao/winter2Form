@@ -7,59 +7,50 @@
     <title>Form By Axing</title>
 </head>
 <body>
-<script>
-    function ps(){
-        if (this.forms.password.type="password")
-            box.innerHTML="<input type=\"html\" name=\"password\" size=\"20\" value="+this.forms.password.value+">";
-        click.innerHTML="<button onclick=\"javascript:txt()\">隐藏密码</button>"}
-    function txt(){
-        if (this.forms.password.type="text")
-            box.innerHTML="<input type=\"password\" name=\"password\" size=\"20\" value="+this.forms.password.value+">";
-        click.innerHTML="<button onclick=\"javascript:ps()\">显示密码</button>"}
-</script>
 <div id="_form">
+    <h3>一个普通的表单</h3>
     <div>
-        <form action="http://localhost:3000/?action=login" role="form" method="post">
-                <legend>注册表单</legend>
+        <form name="forms" action="http://localhost:3000/?action=login" method="post">
                 <div>
-                    <label for="user_name">User Name</label>
-                    <input type="text" id="user_name" name="user_name" placeholder="Enter Name"/>
+                    <label for="user_name">昵称</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="输入昵称" onchange="checkname()"/>
+                    <span id="err"></span>
                 </div>
                 <div>
-                    <label for="user_email">User Email</label>
-                    <input type="text" id="user_email" name="user_email" placeholder="Enter Email"/>
+                    <label for="user_email">邮箱</label>
+                    <input type="text" id="user_email" name="user_email" placeholder="输入邮箱"/>
                 </div>
                 <div id="pwd_wrap">
                     <label for="password">Password</label>
-                    <span id="box"><input type="password" id="password" name="password" placeholder="Enter Password"/></span>
-                    <span id="click"><button onclick="ps()">显示密码</button></span>
+                    <span id="box"><input type="password" id="password" name="password" size="20" placeholder="输入密码"></span>
+                    <span id="click" style="margin-left:10px;"><button type="button" onclick="javascript:ps()">显示密码</button></span>
                 </div>
                 <div>
-                    <label for="confirm">Confirm Password</label>
-                    <input type="password" id="confirm" name="confirm" placeholder="Confirm Password"/>
+                    <label for="cfm">Confirm Password</label>
+                    <input type="password" id="cfm" name="cfm" placeholder="确认密码" onchange="checkpwd()"/>
+                    <span id="dif"></span>
                 </div>
                 <div class="code">
                     <label for="telephone">Enter Telephone</label>
-                    <input type="text" id="telephone" name="telephone" placeholder="Enter Tel"/>
+                    <input type="text" id="telephone" name="telephone" placeholder="输入手机号"/>
                     <button>获取验证码</button>
                 </div>
                 <div>
-                    <input type="text" placeholder="Enter Identifying Code">
+                    <label for="code">Enter Code</label>
+                    <input type="text" id="code" name="code" placeholder="输入验证码">
                 </div>
                 <div>
-                    <button type="submit" class="btn2">Submit1</button>
+                    <button type="submit" class="btn2">Submit</button>
                 </div>
                 <div>
-                    <button onclick="postDate()" class="btn3">Submit2</button>
-                    <p>响应内容：<br><span id="res"></span></p>
+                    <button type="button" onclick="postData()" class="btn3">Submit(not)</button>
+                    <p>响应内容：<br><b id="res"></b></p>
                 </div>
         </form>
     </div>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
 </div>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="Form.js"></script>
 </body>
 </html>
