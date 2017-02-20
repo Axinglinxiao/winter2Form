@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #aaa;
-    font-family: 'Play','Lato', Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Play','Lato', Merriweather,Arial,sans-serif;
 }
 body{
     background: url('i/b/star.jpg') no-repeat center center fixed;
