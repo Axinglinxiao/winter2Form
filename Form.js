@@ -3,11 +3,11 @@
  */
 function ps(){
     if (this.forms.password.type="password")
-        box.innerHTML="<input type=\"html\" name=\"password\" size=\"20\" value="+this.forms.password.value+">";
+        box.innerHTML="<input type=\"html\" name=\"password\" placeholder=\"密码\" size=\"20\" value="+this.forms.password.value+">";
     click.innerHTML="<button type=\"button\" onclick=\"javascript:txt()\">隐藏密码</button>"}
 function txt(){
     if (this.forms.password.type="text")
-        box.innerHTML="<input type=\"password\" name=\"password\" size=\"20\" value="+this.forms.password.value+">";
+        box.innerHTML="<input type=\"password\" name=\"password\" placeholder=\"密码\" size=\"20\" value="+this.forms.password.value+">";
     click.innerHTML="<button type=\"button\" onclick=\"javascript:ps()\">显示密码</button>"}
 function postData() {
     var data = {};
